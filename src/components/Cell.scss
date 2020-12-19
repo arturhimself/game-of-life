@@ -1,0 +1,30 @@
+.cell {
+  position: relative;
+  width: 20%;
+  transition: .2s;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  border-right: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+
+  &:hover {
+    background: #ececec;
+  }
+
+  &._active {
+    background: #ececec;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
