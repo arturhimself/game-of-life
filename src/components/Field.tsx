@@ -1,12 +1,29 @@
 import Cell from './Cell';
 import './Field.scss';
 
-interface FieldProps { cells: number[][] }
+const Field: React.FC = () => {
+  const cells = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ];
 
-const Field: React.FC<FieldProps> = ({ cells }) => {
   return (
     <div className="field">
-      {cells.flat().map((cell, index) => <Cell key={index} index={index} />)}
+      {cells.flat().map((cell, index) => (
+        <Cell 
+          key={index} 
+          index={index} 
+          value={cell}
+        />
+      ))}
     </div>
   );
 }

@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import './Cell.scss';
 
-interface CellProps { index: number }
+interface CellProps { 
+  index: number,
+  value: number
+}
 
-const Cell: React.FC<CellProps> = ({ index }) => {
+const Cell: React.FC<CellProps> = ({ index, value }) => {
   const [showNumber, setShowNumber] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +14,10 @@ const Cell: React.FC<CellProps> = ({ index }) => {
   };
 
   return (
-    <div className={`cell ${showNumber ? '_active' : ''}`} onClick={handleClick}>
+    <div 
+      className={`cell ${showNumber ? '_active' : ''}`} 
+      onClick={handleClick}
+    >
       {showNumber ? <span>{index}</span> : null}
     </div>
   )
