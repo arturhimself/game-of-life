@@ -5,7 +5,7 @@ import Cell from './Cell';
 describe('Tests for Cell component', () => {
   it('should render Cell component', () => {
     expect(
-      shallow(<Cell index={1} value={0} />).matchesElement(
+      shallow(<Cell index={1} filled={0} />).matchesElement(
         <div className="cell"></div>
       )
     )
