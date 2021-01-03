@@ -1,7 +1,6 @@
 .field {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
+  display: inline-block;
   border-top: 1px solid #c1c1c1;
   border-left: 1px solid #c1c1c1;
+  font-size: 0;
 }

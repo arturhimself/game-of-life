@@ -3,72 +3,84 @@ import Cell from './Cell';
 import './Field.scss';
 
 interface FieldProps {
-  game: boolean,
-  gameOff: Function
+	game: boolean;
+	gameOff: Function;
 }
 
-const Field: FC<FieldProps> = ({ game, gameOff }) => {
-	const [cells, setCells] = useState([
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  ]);
+export const getAreaCount = (index: number, area: number[]) => {
+	const areaRowSize = Math.sqrt(area.length);
+	const topPart = area.slice(index - areaRowSize - 1, index - areaRowSize + 2).filter(v => v).length;
+	const middlePart = area.slice(index - 1, index + 2).filter(v => v).length - area[index];
+	const bottomPart = area.slice(index + areaRowSize - 1, index + areaRowSize + 2).filter(v => v).length;
+	return topPart + middlePart + bottomPart;
+};
 
-	const doStep = (cell: number): boolean => {
-		const xCurrent = cell % 10;
-		const yCurrent = Math.floor(cell / 10);
+export const Field: FC<FieldProps> = ({ game }) => {
+	const [cells, setCells] = useState(
+		[
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+			[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+			[0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		].flat()
+	);
+	const rowSize = Math.sqrt(cells.length);
+	let intervalId: any = 0;
 
-		const xChanged = xCurrent - 1;
-    const yChanged = yCurrent - 1;
-    
-    if (xChanged < 0 || yChanged < 0) {
-      return false;
-    }
+	useEffect(() => {
+		const lifeProcess = () => {
+			setCells(cells.map((cell, index) => 
+				[cell, getAreaCount(index, cells)])
+					.map((cell) => {
+						const [alivePast, count] = cell;
+						let isAlive = 0;
+						
+						if (alivePast && count > 1 && count < 4) {
+							isAlive = 1;
+						} else if (!alivePast && count === 3) {
+							isAlive = 1;
+						} else {
+							isAlive = 0;
+						}
+						return isAlive;
+					}));
+		};
 
-		setCells(
-			cells.map((row, index) => {
-				if (yChanged === index) {
-					return row.map((cell, index) => (index === xChanged ? 1 : 0));
-				} else {
-					return row.map(() => 0);
-				}
-			})
-    );
-    
-    return true;
+		if (game) {
+			intervalId = setInterval(() => {
+				lifeProcess();
+			}, 130);
+		}
+
+		return () => {
+			clearInterval(intervalId);
+		};
+	});
+
+	const cellStyle = {
+		width: '50px',
 	};
-
-  const getCurrentPoint = () => cells.flat().indexOf(1);
-
-  useEffect(() => {
-    let intervalId: any = 0;
-
-    if (game) {
-      intervalId = setInterval(() => {
-        const didStep = doStep(getCurrentPoint());
-        if (!didStep) clearInterval(intervalId);
-      }, 1000);
-    }
-    
-    return () => {
-      clearInterval(intervalId);
-    }
-  });
 
 	return (
 		<div className="field">
-			{cells.flat().map((filled, index) => (
-				<Cell key={index} filled={filled} />
+			{cells.map((filled, index) => (
+				<React.Fragment key={index}>
+					{index % rowSize === 0 && index > 1 ? <br /> : ''}
+					<Cell styles={cellStyle} filled={filled} />
+				</React.Fragment>	
 			))}
 		</div>
 	);
 };
 
-export default Field;

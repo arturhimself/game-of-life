@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Field from './components/Field';
+import { Field } from './components/Field';
 import Menu from './components/Menu';
 import './App.scss';
 
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Game of life</h1>
+      <h1 onClick={gameOff}>Game of life</h1>
       <Field game={game} gameOff={gameOff} />
       <Menu handleClick={toggleGame} />
     </div>

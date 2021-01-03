@@ -4,11 +4,12 @@ import './Cell.scss';
 interface CellProps { 
   index?: number,
   filled: number,
+  styles?: Object,
 }
 
-const Cell: React.FC<CellProps> = ({ filled }) => {
+const Cell: React.FC<CellProps> = ({ filled, styles }) => {
   return (
-    <div className={`cell ${filled ? '_active' : ''}`} />
+    <div style={styles} className={`cell ${filled ? '_active' : ''}`} />
   )
 };
 
