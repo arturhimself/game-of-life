@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import './Cell.scss';
+import React from 'react';
+import { CellItem } from "./CellItems";
 
 interface CellProps { 
   index?: number,
   filled: number,
-  styles?: Object,
+  width: number,
 }
 
-const Cell: React.FC<CellProps> = ({ filled, styles }) => {
+const Cell: React.FC<CellProps> = ({ filled, width }) => {
   return (
-    <div style={styles} className={`cell ${filled ? '_active' : ''}`} />
+    <CellItem width={width} isFilled={filled} />
   )
 };
 

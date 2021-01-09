@@ -1,11 +1,18 @@
 import React, { FC, useState, useEffect } from 'react';
+import styled from '@emotion/styled'
 import Cell from './Cell';
-import './Field.scss';
 
 interface FieldProps {
-	game: boolean;
-	gameOff: Function;
+	game: boolean,
+	gameOff: Function,
 }
+
+const FieldWrapper = styled.div`
+	display: inline-block;
+	border-top: 1px solid #c1c1c1;
+	border-left: 1px solid #c1c1c1;
+	font-size: 0;
+`;
 
 export const getAreaCount = (index: number, area: number[]) => {
 	const areaRowSize = Math.sqrt(area.length);
@@ -36,9 +43,10 @@ export const Field: FC<FieldProps> = ({ game }) => {
 		].flat()
 	);
 	const rowSize = Math.sqrt(cells.length);
-	let intervalId: any = 0;
 
 	useEffect(() => {
+		let intervalId: any = 0;
+
 		const lifeProcess = () => {
 			setCells(cells.map((cell, index) => 
 				[cell, getAreaCount(index, cells)])
@@ -66,21 +74,16 @@ export const Field: FC<FieldProps> = ({ game }) => {
 		return () => {
 			clearInterval(intervalId);
 		};
-	});
-
-	const cellStyle = {
-		width: '50px',
-	};
+	}, [game, cells]);
 
 	return (
-		<div className="field">
+		<FieldWrapper>
 			{cells.map((filled, index) => (
 				<React.Fragment key={index}>
 					{index % rowSize === 0 && index > 1 ? <br /> : ''}
-					<Cell styles={cellStyle} filled={filled} />
+					<Cell width={50} filled={filled} />
 				</React.Fragment>	
 			))}
-		</div>
+		</FieldWrapper>
 	);
 };
-

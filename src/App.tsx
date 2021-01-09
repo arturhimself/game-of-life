@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
+import styled from "@emotion/styled";
 import { Field } from './components/Field';
 import Menu from './components/Menu';
-import './App.scss';
+
+const AppWrapper = styled.div`
+	font-family: Arial, sans-serif;
+  font-size: 18px;
+
+  & * {
+    box-sizing: border-box;
+  }
+`;
 
 const App = () => {
   const [game, setGame] = useState(false);
@@ -15,11 +24,11 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <AppWrapper className="app">
       <h1 onClick={gameOff}>Game of life</h1>
       <Field game={game} gameOff={gameOff} />
       <Menu handleClick={toggleGame} />
-    </div>
+    </AppWrapper>
   );
 }
 
