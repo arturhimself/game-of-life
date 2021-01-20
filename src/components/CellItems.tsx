@@ -40,5 +40,5 @@ const FilledCell = css`
 export const CellItem = styled.span<CellItemProps>`
 	${BaseCell};
 	width: ${({ width }) => width}px;
-	${({ isFilled }) => isFilled ? FilledCell: ''};
+	${({ isFilled }) => isFilled ? FilledCell : ''};
 `;
