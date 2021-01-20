@@ -1,8 +1,6 @@
 import React from 'react';
-import { shallow, mount, render, configure } from 'enzyme';
+import { shallow } from 'enzyme';
 import App from './App';
-import Field from './components/Field';
-import Menu from './components/Menu';
 
 describe('A test for App component', () => {
 	it('should render App Component', () => {

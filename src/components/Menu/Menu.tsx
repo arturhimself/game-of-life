@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 interface MenuProps { handleClick: Function }
 
@@ -10,4 +10,4 @@ const Menu: FC<MenuProps> = ({ handleClick }) => {
   )
 };
 
-export default Menu;
+export { Menu };

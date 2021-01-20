@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
-import { Engine } from '../engine';
+import { Engine } from 'src/engine';
 import styled from '@emotion/styled'
-import Cell from './Cell';
+import { Cell } from './components/Cell';
 
 interface FieldProps {
 	game: boolean,

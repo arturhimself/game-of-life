@@ -13,4 +13,4 @@ const Cell: React.FC<CellProps> = ({ filled, width }) => {
   )
 };
 
-export default Cell;
+export { Cell };

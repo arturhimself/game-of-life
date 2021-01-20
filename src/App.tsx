@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
-import { Field } from './components/Field';
-import Menu from './components/Menu';
+import { Field } from './components/';
+import { Menu } from './components/';
 
 const AppWrapper = styled.div`
 	font-family: Arial, sans-serif;
@@ -30,6 +30,6 @@ const App = () => {
       <Menu handleClick={toggleGame} />
     </AppWrapper>
   );
-}
+};
 
 export default App;
