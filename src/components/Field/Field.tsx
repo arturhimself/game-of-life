@@ -1,19 +1,19 @@
 import React, { FC, useState, useEffect } from 'react';
-import Cell from './Cell';
-import './Field.scss';
+import { Engine } from 'src/engine';
+import styled from '@emotion/styled'
+import { Cell } from './components/Cell';
 
 interface FieldProps {
-	game: boolean;
-	gameOff: Function;
+	game: boolean,
+	gameOff: Function,
 }
 
-export const getAreaCount = (index: number, area: number[]) => {
-	const areaRowSize = Math.sqrt(area.length);
-	const topPart = area.slice(index - areaRowSize - 1, index - areaRowSize + 2).filter(v => v).length;
-	const middlePart = area.slice(index - 1, index + 2).filter(v => v).length - area[index];
-	const bottomPart = area.slice(index + areaRowSize - 1, index + areaRowSize + 2).filter(v => v).length;
-	return topPart + middlePart + bottomPart;
-};
+const FieldWrapper = styled.div`
+	display: inline-block;
+	border-top: 1px solid #c1c1c1;
+	border-left: 1px solid #c1c1c1;
+	font-size: 0;
+`;
 
 export const Field: FC<FieldProps> = ({ game }) => {
 	const [cells, setCells] = useState(
@@ -36,51 +36,29 @@ export const Field: FC<FieldProps> = ({ game }) => {
 		].flat()
 	);
 	const rowSize = Math.sqrt(cells.length);
-	let intervalId: any = 0;
 
 	useEffect(() => {
-		const lifeProcess = () => {
-			setCells(cells.map((cell, index) => 
-				[cell, getAreaCount(index, cells)])
-					.map((cell) => {
-						const [alivePast, count] = cell;
-						let isAlive = 0;
-						
-						if (alivePast && count > 1 && count < 4) {
-							isAlive = 1;
-						} else if (!alivePast && count === 3) {
-							isAlive = 1;
-						} else {
-							isAlive = 0;
-						}
-						return isAlive;
-					}));
-		};
+		const engine = new Engine();
 
 		if (game) {
-			intervalId = setInterval(() => {
-				lifeProcess();
-			}, 130);
+			engine.updateInterval(setInterval(() => {
+				setCells(engine.getNextGen(cells));
+			}, 130));
 		}
 
 		return () => {
-			clearInterval(intervalId);
+			engine.clearInterval();
 		};
-	});
-
-	const cellStyle = {
-		width: '50px',
-	};
+	}, [game, cells]);
 
 	return (
-		<div className="field">
+		<FieldWrapper>
 			{cells.map((filled, index) => (
 				<React.Fragment key={index}>
 					{index % rowSize === 0 && index > 1 ? <br /> : ''}
-					<Cell styles={cellStyle} filled={filled} />
+					<Cell width={50} filled={filled} />
 				</React.Fragment>	
 			))}
-		</div>
+		</FieldWrapper>
 	);
 };
-
