@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
+import { css } from '@emotion/core';
 
 interface CellItemProps {
-	isFilled: number,
-	width: number,
+  isFilled: number;
+  width: number;
 }
 
 const BaseCell = css`
   position: relative;
   display: inline-block;
-  transition: .1s;
+  transition: 0.1s;
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     padding-top: 100%;
   }
@@ -34,11 +34,11 @@ const BaseCell = css`
 `;
 
 const FilledCell = css`
-    background: #000;
+  background: #000;
 `;
 
 export const CellItem = styled.span<CellItemProps>`
-	${BaseCell};
-	width: ${({ width }) => width}px;
-	${({ isFilled }) => isFilled ? FilledCell : ''};
+  ${BaseCell};
+  width: ${({ width }) => width}px;
+  ${({ isFilled }) => (isFilled ? FilledCell : '')};
 `;
