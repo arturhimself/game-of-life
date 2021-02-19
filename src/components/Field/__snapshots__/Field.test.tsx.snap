@@ -1,0 +1,1201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field render field 1`] = `
+.emotion-225 {
+  display: inline-block;
+  border-top: 1px solid #c1c1c1;
+  border-left: 1px solid #c1c1c1;
+  font-size: 0;
+}
+
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
+  border-right: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  width: 50px;
+}
+
+.emotion-0::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.emotion-0:hover {
+  background: #ececec;
+}
+
+.emotion-0 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.emotion-26 {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
+  border-right: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  width: 50px;
+  background: #000;
+}
+
+.emotion-26::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.emotion-26:hover {
+  background: #ececec;
+}
+
+.emotion-26 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+<div
+  className="emotion-225"
+>
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-26"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  <br />
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+  
+  <span
+    className="emotion-0"
+    width={50}
+  />
+</div>
+`;
