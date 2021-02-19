@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { CellItem } from './CellItems';
 
 interface CellProps {
@@ -7,7 +7,7 @@ interface CellProps {
   width: number;
 }
 
-const Cell: React.FC<CellProps> = ({ filled, width }) => {
+const Cell: FC<CellProps> = ({ filled, width }) => {
   return <CellItem width={width} isFilled={filled} />;
 };
 

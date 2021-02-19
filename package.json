@@ -8,6 +8,7 @@
     "start": "npx webpack-dev-server --mode development --hot",
     "build": "npx webpack --mode production",
     "test": "npx jest",
+    "test:coverage" : "npx jest --collectCoverage",
     "lint": "npx eslint --ext js,.jsx,.ts,.tsx ./src/**",
     "ts:check": "npx tsc -p tsconfig.json --noEmit"
   },
