@@ -1,5 +1,5 @@
 class Engine {
-  private intervalId = 0;
+  private intervalId: any = 0;
 
   static getAreaCount(index: number, field: number[]): number {
     const areaRowSize = Math.sqrt(field.length);
