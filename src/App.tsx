@@ -1,29 +1,22 @@
-import React, { FC, useState } from 'react';
-import styled from '@emotion/styled';
-import { Field, Menu } from '@/components';
+import React, { FC } from 'react';
+import { ThemeProvider } from '@emotion/react';
+import { NormalizeStyles } from '@/global-styles';
+import { Header } from '@/components';
+import { Home } from '@/pages';
 
-const AppWrapper = styled.div`
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-
-  & * {
-    box-sizing: border-box;
-  }
-`;
+const theme = {
+	colors: {
+		primary: '#265F25',
+	}
+};
 
 const App: FC = () => {
-  const [game, setGame] = useState(false);
-
-  const toggleGame = () => {
-    setGame(!game);
-  };
-
   return (
-    <AppWrapper className="app">
-      <h1>Game of life</h1>
-      <Field game={game} />
-      <Menu handleClick={toggleGame} />
-    </AppWrapper>
+    <ThemeProvider theme={theme}>
+			<NormalizeStyles />
+			<Header />
+			<Home />
+    </ThemeProvider>
   );
 };
 
